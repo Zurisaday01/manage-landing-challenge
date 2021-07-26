@@ -1,0 +1,9 @@
+//get color
+@function color($elem, $variant) {
+	@return map-get(map-get($color, $elem), $variant);
+}
+
+//using in @mixin font-size
+@function get-font-size($elem) {
+	@return map-get($font__size, $elem);
+}

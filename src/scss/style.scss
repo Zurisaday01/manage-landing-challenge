@@ -1,0 +1,52 @@
+/**
+ * CONTENTS
+ *
+ * GENERIC
+ * Normalize.............................. Remueve estiloss por defecto que aplica la hoja de estilos del navegador
+ *
+ * ABSTRACTS
+ * Functions.............................. 
+ * Media Queries.......................... 
+ * Mixins................................. 
+ * Variables.............................. 
+ *
+ * BASE
+ * Animations............................. 
+ * Base................................... 
+ * Typography............................. 
+ * Utilities.............................. 
+ *
+ * COMPONENTS
+ *
+ * LAYOUT
+ * Footer................................. 
+ * Header................................. 
+ * Navigation............................. 
+ *
+ * PAGES
+ * Home...................................Residen las divisiones de la página <section>s
+**/
+
+@import 'normalize';
+
+@import './abstracts/functions';
+@import './abstracts/include-media';
+@import './abstracts/mixins';
+@import './abstracts/variables';
+
+@import './base/animations';
+@import './base/base';
+@import './base/typography';
+@import './base/utilities';
+
+@import './components/btn';
+@import './components/list';
+@import './components/logo';
+@import './components/reviews';
+@import './components/social-media';
+
+@import './layout/footer';
+@import './layout/header';
+@import './layout/navigation';
+
+@import './pages/home';

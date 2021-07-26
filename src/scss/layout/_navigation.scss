@@ -1,0 +1,76 @@
+.navigation {
+	display: flex;
+	align-items: center;
+	position: relative;
+	@include respond(avena) {
+		flex-direction: column;
+		align-items: flex-end;
+		justify-content: center;
+	}
+
+	&__checkbox {
+		display: none;
+	}
+
+	&__nav {
+		color: color(primary, b);
+		@include respond(avena) {
+			opacity: 0;
+			visibility: hidden;
+			background-color: color(neutral, d);
+			padding: 4rem 2rem;
+			transform: translateY(18%);
+			width: 100%;
+			transition: all 0.2s;
+			border-radius: 8px;
+		}
+	}
+
+	&__btn {
+		display: none;
+		cursor: pointer;
+		width: 2.8rem;
+		height: 2rem;
+		background-image: url(./icon-hamburger.svg);
+		background-position: center;
+		background-size: cover;
+		transition: all 0.3s;
+		@include respond(avena) {
+			display: block;
+			position: absolute;
+			top: -2.7rem;
+			right: 0;
+		}
+	}
+	&__list {
+		display: flex;
+		list-style: none;
+		column-gap: 4rem;
+		@include respond(trigo) {
+			column-gap: 1.8rem;
+		}
+		@include respond(avena) {
+			flex-direction: column;
+			align-items: center;
+			row-gap: 2rem;
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+		color: inherit;
+		font-weight: 600;
+		transition: all 0.5s;
+
+		&:hover {
+			filter: opacity(60%);
+		}
+	}
+}
+.navigation__checkbox:checked + .navigation__btn {
+	background-image: url(./icon-close.svg);
+}
+.navigation__checkbox:checked ~ .navigation__nav {
+	opacity: 1;
+	visibility: visible;
+}

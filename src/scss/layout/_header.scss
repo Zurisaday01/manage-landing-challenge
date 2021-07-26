@@ -1,0 +1,33 @@
+.header {
+	grid-column: 1 / -1;
+	grid-row: 1 / 2;
+	width: 80%;
+	min-width: 50%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100000;
+	height: max-content;
+	padding-top: 6rem;
+
+	@include respond(avena) {
+		flex-direction: column;
+		align-items: stretch;
+		width: 90%;
+		padding-top: 5rem;
+	}
+	@include respond(cebada) {
+		padding-top: 4rem;
+	}
+	&__btn {
+		@include respond(avena) {
+			display: none;
+		}
+	}
+}
+
+.logo {
+	margin-top: 1.2rem;
+	align-self: flex-start;
+}

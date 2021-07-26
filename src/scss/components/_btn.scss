@@ -1,0 +1,45 @@
+.btn {
+	&,
+	&:link,
+	&:visited {
+		border-radius: 10rem;
+		text-decoration: none;
+		transition: all 1s;
+		border: none;
+		cursor: pointer;
+	}
+
+	&--primary {
+		padding: 1.5rem 3.5rem;
+		background-color: color(primary, a);
+		color: color(neutral, d);
+		box-shadow: 0 5px 1rem rgba(color(primary, a), 0.7);
+
+		&:hover {
+			filter: opacity(75%);
+			box-shadow: 0 5px 1rem rgba(color(primary, a), 0.7);
+		}
+	}
+
+	&--white {
+		padding: 1.5rem 3.5rem;
+		background-color: color(neutral, d);
+		color: color(primary, a);
+		font-weight: 700;
+		box-shadow: 0 0 2rem rgba(color(neutral, b), 0.2);
+
+		&:hover {
+			color: rgba(color(primary, a), 0.6);
+		}
+	}
+
+	&--form {
+		padding: 1.5rem 2rem;
+		background-color: color(primary, a);
+		color: color(neutral, d);
+
+		&:hover {
+			filter: brightness(150%);
+		}
+	}
+}

@@ -1,0 +1,56 @@
+.social-media {
+	display: flex;
+	justify-content: space-between;
+	@include respond(trigo) {
+		justify-content: flex-start;
+	}
+	@include respond(maiz) {
+		grid-column: 1 / -1;
+		grid-row: 3 / 4;
+		justify-content: space-between;
+		width: 50vw;
+		margin-top: 4rem;
+		margin-bottom: 4rem;
+	}
+	@include respond(cebada) {
+		width: 60vw;
+	}
+	@include respond(mijo) {
+		width: 80vw;
+	}
+
+	&__link {
+		@include respond(trigo) {
+			&:not(:last-child) {
+				margin-right: 2rem;
+			}
+		}
+		@include respond(maiz) {
+			&:not(:last-child) {
+				margin-right: 0rem;
+			}
+		}
+	}
+
+	&__box {
+		width: 2rem;
+		height: 2rem;
+
+		@include respond(maiz) {
+			width: 3.8rem;
+			height: 3.8rem;
+		}
+	}
+
+	&__icon {
+		cursor: pointer;
+		fill: #fff;
+		transition: all 0.2s;
+		&:hover {
+			fill: color(primary, a);
+		}
+		@include respond(maiz) {
+			transform: scale(1.7);
+		}
+	}
+}

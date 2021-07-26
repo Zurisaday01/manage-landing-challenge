@@ -1,0 +1,22 @@
+//colors
+$color: (
+	primary: (
+		a: #f25f3a,
+		b: #242d52,
+	),
+	neutral: (
+		a: #9095a7,
+		b: #1d1e25,
+		c: #ffefeb,
+		d: #fafafa,
+	),
+);
+
+$font_family: 'Be Vietnam', sans-serif;
+//Weights: 400, 500, 700
+
+$font__size: (
+	alpha: clamp(3.5rem, 5vw, 6rem),
+	beta: clamp(3rem, 5vw, 4rem),
+	gamma: 1.6rem,
+);

@@ -1,0 +1,19 @@
+.heading {
+	color: color(primary, b);
+	&--primary {
+		@include font-size(alpha);
+	}
+
+	&--secondary {
+		@include font-size(beta);
+	}
+
+	&--third {
+		@include font-size(gamma);
+	}
+}
+
+.paragraph {
+	line-height: 1.7;
+	color: color(neutral, a);
+}

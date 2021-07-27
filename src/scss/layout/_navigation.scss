@@ -69,6 +69,8 @@
 }
 .navigation__checkbox:checked + .navigation__btn {
 	background-image: url(./icon-close.svg);
+	width: 2.8rem;
+	height: 2.3rem;
 }
 .navigation__checkbox:checked ~ .navigation__nav {
 	opacity: 1;

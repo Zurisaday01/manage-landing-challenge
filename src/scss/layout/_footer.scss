@@ -43,26 +43,46 @@
 		@include respond(maiz) {
 			grid-column: 1 / -1;
 			grid-row: 2 / 3;
-			width: 50vw;
+			width: 60vw;
 			justify-self: center;
 			margin-top: 1rem;
 		}
-		@include respond(cebada) {
-			width: 60vw;
-		}
+
 		@include respond(mijo) {
 			width: 70vw;
 		}
 	}
 
 	&__list {
+		width: 100%;
 		list-style: none;
-		display: flex;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(4, min-content);
+		justify-items: start;
+
+		@include respond(trigo) {
+			column-gap: 5rem;
+		}
 	}
 
 	&__item {
 		padding: 1rem 0rem;
+		&--left {
+			grid-column: 1 / 2;
+		}
+		&--right {
+			grid-column: 2 /-1;
+			&-1 {
+				grid-row: 1 / 2;
+			}
+			&-2 {
+				grid-row: 2 / 3;
+			}
+			&-3 {
+				grid-row: 3 / 4;
+			}
+		}
 	}
 
 	&__link {

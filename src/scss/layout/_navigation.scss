@@ -27,14 +27,27 @@
 	}
 
 	&__btn {
-		display: none;
 		cursor: pointer;
 		width: 2.8rem;
-		height: 2rem;
+		height: 2.2rem;
 		background-image: url(./icon-hamburger.svg);
 		background-position: center;
 		background-size: cover;
+		position: relative;
 		transition: all 0.3s;
+
+		&::before {
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 15%;
+			background-image: url(./icon-close.svg);
+			background-repeat: no-repeat;
+			display: none;
+		}
+
 		@include respond(avena) {
 			display: block;
 			position: absolute;
@@ -68,9 +81,10 @@
 	}
 }
 .navigation__checkbox:checked + .navigation__btn {
-	background-image: url(./icon-close.svg);
-	width: 2.8rem;
-	height: 2.3rem;
+	background-image: none;
+	&::before {
+		display: block;
+	}
 }
 .navigation__checkbox:checked ~ .navigation__nav {
 	opacity: 1;

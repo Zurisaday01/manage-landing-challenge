@@ -19,19 +19,6 @@
 		width: 80vw;
 	}
 
-	&__link {
-		@include respond(trigo) {
-			&:not(:last-child) {
-				margin-right: 2rem;
-			}
-		}
-		@include respond(maiz) {
-			&:not(:last-child) {
-				margin-right: 0rem;
-			}
-		}
-	}
-
 	&__box {
 		width: 2rem;
 		height: 2rem;
